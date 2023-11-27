@@ -70,6 +70,11 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
+  background-image:url('images/wallpaperflare.com_wallpaper\ \(1\).jpg');
+  opacity:initial;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 p {
