@@ -1,73 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <!-- normalize -->
+    <!-- Normalize -->
     <link rel="stylesheet" href="Deisgn/normalize.css" />
-    <!-- font-awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <!-- main css -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="Deisgn/main.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
+
+        h1 {
+            margin: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            max-height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #e44d26;
+        }
+
+        .contact-link {
+            margin-left: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #e44d26;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        #login-form,
+        #signup-form {
+            margin: 0 20px;
+        }
+
         .event {
             margin: 20px;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
+            background-color: #fff;
         }
+
         .event h2 {
             margin-top: 0;
             padding-bottom: 10px;
             border-bottom: 1px solid #ddd;
+            color: #333;
         }
+
         .event p {
             margin: 10px 0;
+            color: #666;
         }
+
         .event ul {
             list-style-type: none;
             padding: 0;
         }
+
         .event li {
             margin-bottom: 10px;
+            color: #666;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-center">
-          <div class="nav-header">
-            <a href="index.html" class="nav-logo">
-              <img src="images/logo.svg" alt="simply recipes" />
-            </a>
-            <button class="nav-btn btn">
-              <i class="fas fa-align-justify"></i>
-            </button>
-          </div>
-          <div class="nav-links">
-            <a href="index.html" class="nav-link"> home </a>
-            <a href="about.html" class="nav-link"> about </a>
-            <a href="tags.html" class="nav-link"> tags </a>
-            <a href="recipes.html" class="nav-link"> recipes </a>
-            <a href="seasonals.html" class="nav-link">seasonals</a>
-            <a href="cookbook.html" class="nav-link">cookbook</a>
-            <a href="community.html" class="nav-link">community</a>
-            <a href="share recipe.html" class="nav-link">Share</a>
-            <a href="faqs.html" class="nav-link">FAQS</a>
-    
-            <div class="nav-link contact-link">
-              <a href="contact.html" class="btn"> contact </a>
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.svg" alt="simply recipes" />
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
             </div>
-          </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="tags.html" class="nav-link">Tags</a>
+                <a href="recipes.html" class="nav-link">Recipes</a>
+                <a href="seasonals.html" class="nav-link">Seasonals</a>
+                <a href="cookbook.html" class="nav-link">Cookbook</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="share recipe.html" class="nav-link">Share</a>
+                <a href="faqs.html" class="nav-link">FAQs</a>
+
+                <div class="nav-link contact-link">
+                    <a href="contact.html" class="btn">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="login-form">
+            <a href="login.html" class="login">Login</a>
+        </div>
+        <div id="signup-form">
+            <a href="sign-up.html" class="signup">Sign Up</a>
         </div>
     </nav>
     <h1>Community Events</h1>
@@ -99,7 +188,7 @@
         <h2>Recipe Photo Contest</h2>
         <p>Date: May 31st, 2022</p>
         <p>Time: 10:00 AM to 2:00 PM</p>
-        <p>Location:Eco Park</p>
+        <p>Location: Eco Park</p>
         <ul>
             <li>Ultimate Recipe Sharing</li>
             <li>Bounce houses and games for kids</li>
@@ -107,4 +196,5 @@
         </ul>
     </div>
 </body>
+
 </html>
