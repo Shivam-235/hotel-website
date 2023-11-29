@@ -14,65 +14,69 @@
         <!-- main css -->
         <link rel="stylesheet" href="Deisgn/main.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        h1{
-            margin: 20px;
-        }
-        .recipe {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
-        }
-        .recipe h2 {
-            margin-top: 0;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .recipe p {
-            margin: 10px 0;
-        }
-        .recipe ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .recipe li {
-            margin-bottom: 10px;
-        }
-        .add-recipe-form {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
-        }
-        .add-recipe-form label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .add-recipe-form input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-        }
-        .add-recipe-form input[type="submit"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.add-recipe-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#add-recipe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-recipe-form label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#add-recipe-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#add-recipe-form input[type="submit"] {
+    background-color: #e44d26;
+    color: #fff;
+    cursor: pointer;
+}
+
+#add-recipe-form input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.recipe {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#recipe-container {
+    margin-top: 20px;
+}
+
     </style>
 </head>
 <body>
@@ -87,13 +91,13 @@
             </button>
           </div>
           <div class="nav-links">
-            <a href="index.html" class="nav-link"> home </a>
-            <a href="about.html" class="nav-link"> about </a>
-            <a href="tags.html" class="nav-link"> tags </a>
-            <a href="recipes.html" class="nav-link"> recipes </a>
-            <a href="seasonals.html" class="nav-link">seasonals</a>
-            <a href="cookbook.html" class="nav-link">cookbook</a>
-            <a href="community.html" class="nav-link">community</a>
+            <a href="index.html" class="nav-link"> Home </a>
+            <a href="about.html" class="nav-link"> About </a>
+            <a href="tags.html" class="nav-link"> Tags </a>
+            <a href="recipes.html" class="nav-link"> Recipes </a>
+            <a href="seasonals.html" class="nav-link">Seasonals</a>
+            <a href="cookbook.html" class="nav-link">Sookbook</a>
+            <a href="community.html" class="nav-link">Community</a>
             <a href="share recipe.html" class="nav-link">Share</a>
             <a href="faqs.html" class="nav-link">FAQS</a>
     

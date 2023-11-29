@@ -65,13 +65,11 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
-  font-family: var(--bodyFont);
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--textColor);
-
-  opacity: initial;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 p {
@@ -327,100 +325,150 @@ Navbar
 ===============
 */
 
+/* Reset some default styles */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a box-sizing border-box model to all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
 .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   display: flex;
+  justify-content: space-between; /* Added to keep items on the same line */
   align-items: center;
-  justify-content: center;
-  background-color: #b9e444;
 }
+
 .nav-center {
-  width: 90vw;
-  max-width: var(--max-width);
-}
-.nav-header {
-  height: 6rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-.nav-header img {
-  width: 200px;
-}
-.nav-logo {
+
+.nav-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.nav-logo img {
+  max-height: 40px;
 }
 
 .nav-btn {
-  padding: 0.15rem 0.75rem;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
-.nav-btn i {
-  font-size: 1.25rem;
-}
+
 .nav-links {
-  height: 0;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-.show-links {
-  height: 23.9375rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .nav-link {
-  display: block;
-  text-align: center;
-  font-size: 1.25rem;
-  text-transform: capitalize;
-  color: var(--grey-900);
-  letter-spacing: var(--letterSpacing);
-  padding: 1rem 0;
-  border-top: 1px solid var(--grey-500);
-  transition: var(--transition);
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
+
 .nav-link:hover {
-  color: var(--primary-500);
+  color: #e44d26;
 }
 
-.contact-link a {
-  padding: 0.15rem 1rem;
+.contact-link {
+  margin-left: 20px;
 }
 
-@media screen and (min-width: 992px) {
-  .navbar {
-    height: 6rem;
-  }
-  .nav-center {
-    display: flex;
-    align-items: center;
-  }
-  .nav-header {
-    padding: 0;
-    margin-right: 2rem;
-    height: auto;
-  }
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #e44d26;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
 
-  .nav-btn {
-    display: none;
-  }
+.btn:hover {
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+#signup-form {
+  margin-left: 10px; /* Add margin between Login and Sign Up */
+}
+
+.login,
+.signup {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #e44d26;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login:hover,
+.signup:hover {
+  background-color: #333;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
   .nav-links {
-    height: auto !important;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
   }
+
+  .nav-links.show {
+      display: flex;
+  }
+
   .nav-link {
-    padding: 0;
-    border-top: none;
-    margin-right: 1rem;
-    font-size: 1rem;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
   }
-  .contact-link {
-    margin-right: 0;
-    margin-left: auto;
+
+  .container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .login,
+  .signup,
+  #signup-form {
+      margin: 10px 0;
   }
 }
+
 /*
 =============== 
 Page
